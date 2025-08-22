@@ -7,8 +7,8 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center">
-                <h3 class="card-title mb-0">📋 Lista de Vuelos Registrados</h3>
-                <a href="{% url 'registrar_vuelo' %}" class="btn btn-primary btn-sm">➕ Nuevo Vuelo</a>
+                <h3 class="card-title mb-0">Lista de Vuelos Registrados</h3>
+                <a href="{% url 'registrar_vuelo' %}" class="btn btn-primary btn-sm">Nuevo Vuelo</a>
             </div>
             <div class="card-body">
                 {% if vuelos %}
@@ -29,9 +29,9 @@
                                     <td>{{ vuelo.nombre }}</td>
                                     <td>
                                         {% if vuelo.tipo == 'Nacional' %}
-                                            <span class="badge bg-success">🇨🇴 {{ vuelo.tipo }}</span>
+                                            <span class="badge bg-success">{{ vuelo.tipo }}</span>
                                         {% else %}
-                                            <span class="badge bg-info">🌍 {{ vuelo.tipo }}</span>
+                                            <span class="badge bg-info">{{ vuelo.tipo }}</span>
                                         {% endif %}
                                     </td>
                                     <td>${{ vuelo.precio|floatformat:0 }}</td>
@@ -48,12 +48,12 @@
                     <div class="text-center py-5">
                         <h5 class="text-muted">No hay vuelos registrados</h5>
                         <p>¡Comienza agregando tu primer vuelo!</p>
-                        <a href="{% url 'registrar_vuelo' %}" class="btn btn-primary">➕ Registrar Primer Vuelo</a>
+                        <a href="{% url 'registrar_vuelo' %}" class="btn btn-primary">Registrar Primer Vuelo</a>
                     </div>
                 {% endif %}
                 
                 <div class="mt-4">
-                    <a href="{% url 'home' %}" class="btn btn-secondary">🔙 Volver al Inicio</a>
+                    <a href="{% url 'home' %}" class="btn btn-secondary">Volver al Inicio</a>
                 </div>
             </div>
         </div>
